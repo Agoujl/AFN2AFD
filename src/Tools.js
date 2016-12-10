@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Button, Col, ControlLabel, OverlayTrigger, Tooltip} from 'react-bootstrap';
+import {Button, Col, OverlayTrigger, Tooltip} from 'react-bootstrap';
 import {
 	Layer,
 	Arrow,
@@ -21,7 +21,8 @@ export default class Tools extends Component {
 			appstore: AppStore.getAll(),
 			selected_1: null,
 			selected_2: null,
-			input: null
+			input: null,
+			color_sommet: "white"
 		};
 	}
 
@@ -32,11 +33,16 @@ export default class Tools extends Component {
 		this.setState({selected_1: null, selected_2: null, input: null});
 	}
 
-	createSommet() {
-		appactions.createSommet(34, 23);
+	enableCreation() {
+		if (this.state.appstore.enableCreation == false) {
+			appactions.enableCreation();
+
+		}
 	}
 	render() {
-
+		this.state.color_sommet = (this.state.appstore.enableCreation)
+			? 'black'
+			: 'green';
 		return (
 			<Col xs={12} md={2}>
 				<div className="subContainer">
@@ -44,39 +50,35 @@ export default class Tools extends Component {
 
 					<Stage width={50} height={50}>
 						<Layer>
-							<Group onClick={this.createSommet.bind(this)}>
-								<Circle y={20} x={30} radius={20} fill={'black'}/>
-								<Text x={25} y={15} text={'C'} fontSize={18} fontFamily={'Calibri'} fill={'#fff'} width={100}/>
+							<Group onClick={this.enableCreation.bind(this)}>
+								<Circle y={20} x={30} radius={20} fill={this.state.color_sommet}/>
+								<Text x={25} y={15} text={'S'} fontSize={18} fontFamily={'Calibri'} fill={'#fff'} width={100}/>
 							</Group>
 						</Layer>
 					</Stage>
-					<Stage width={50} height={50}>
-						<Layer>
-							<Arrow x={0} y={0} points={[0, 20, 40, 20]} pointerLength={7} pointerWidth={6} stroke={'blue'} strokeWidth={5}/>
-						</Layer>
-					</Stage>
-					<ControlLabel>Select sommet de depart</ControlLabel>
-					<select onChange={e => this.setState({
-						selected_1: e.target.value || null
-					})} value={this.state.selected || ''}>
-						<option value="">choose</option>
-						{this.state.appstore.Sommet.map(item => <option value={item.id}>{item.id}</option>)}
-					</select>
-
-					<ControlLabel>Select sommet d'arriver</ControlLabel>
-					<select onChange={e => this.setState({
-						selected_2: e.target.value || null
-					})} value={this.state.selected || ''}>
-						<option value="">choose</option>
-						{this.state.appstore.Sommet.map(item => <option value={item.id}>{item.id}</option>)}
-					</select>
-					<input type="text" maxLength='1' onChange={e => this.setState({
-						input: e.target.value || null
-					})} value={this.state.input || ''}/>
-					<Button bsStyle="primary" value='Reset' onClick={this.createArc.bind(this)}>
-						create Arc
-					</Button>
-
+					<input type="checkbox" id="checkbox" name="test" value="false"/>
+					<label for="checkbox">dernier sommet</label>
+					<h4 className="title">Creation d'arc</h4>
+					<Col xs={12} md={7}>
+						<select onChange={e => this.setState({
+							selected_1: e.target.value || null
+						})} value={this.state.selected_1 || ''}>
+							<option value="">choose</option>
+							{this.state.appstore.Sommet.map(item => <option value={item.id}>{item.id}</option>)}
+						</select>
+						<select onChange={e => this.setState({
+							selected_2: e.target.value || null
+						})} value={this.state.selected_2 || ''}>
+							<option value="">choose</option>
+							{this.state.appstore.Sommet.map(item => <option value={item.id}>{item.id}</option>)}
+						</select>
+						<input type="text" maxLength='1' className='input' onChange={e => this.setState({
+							input: e.target.value || null
+						})} value={this.state.input || ''}/>
+						<Button bsStyle="primary" value='Reset' onClick={this.createArc.bind(this)}>
+							create Arc
+						</Button>
+					</Col>
 				</div>
 			</Col>
 		)

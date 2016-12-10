@@ -21,3 +21,8 @@ export function deleteSommet() {
         type: "DELETE",
     });
 }
+export function enableCreation() {
+    dispatcher.dispatch({
+        type: "ENABLE_CREATION",
+    });
+}

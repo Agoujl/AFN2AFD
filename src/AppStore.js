@@ -8,6 +8,7 @@ class AppStore extends EventEmitter {
         this.elements = {
             Arcs: [],
             Sommet: [],
+            enableCreation:false,
 
         };
 
@@ -36,7 +37,12 @@ class AppStore extends EventEmitter {
             x,
             y,
         });
+        this.elements.enableCreation=false;
         this.emit("change");
+    }
+    enableCreation(){
+      this.elements.enableCreation=true;
+      this.emit("change");
     }
 
     getAll() {
@@ -53,6 +59,9 @@ class AppStore extends EventEmitter {
             case "DELETE":
                 this.deleteSommet();
                 break;
+            case "ENABLE_CREATION":
+                  this.enableCreation();
+                  break;
             default:
 
         }
