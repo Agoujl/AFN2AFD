@@ -32,7 +32,7 @@ Les fichiers les plus important sont:
 │   ├── index.js
 │   ├── logo.svg
 │   └── Tools.js
-
+*	*	*
 ###Comment lancer le test de l'application#
 Avant il faut charger les modules de **nodejs** necessaire pour le bon fonctionnement de l'application par la commande :
 ```
@@ -45,4 +45,4 @@ npm start
 
 ```
 ###auteurs#
-![members.png](http://)
+![members.png](members.png)
