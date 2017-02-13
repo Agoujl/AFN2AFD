@@ -14,17 +14,19 @@ export function createArc(Dep_Id, Ari_Id, value) {
     });
 }
 
-export function createSommet(x, y) {
+export function createSommet(x, y,finale) {
     dispatcher.dispatch({
         type: "CREATE_SOMMET",
         x,
         y,
+        finale,
     });
 }
 
-export function deleteSommet() {
+export function set_finale(checked) {
     dispatcher.dispatch({
-        type: "DELETE",
+        type: "TEST_FINALE",
+        checked,
     });
 }
 export function enableCreation() {
