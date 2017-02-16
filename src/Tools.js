@@ -6,7 +6,8 @@ import {
   Button,
   Col,
   OverlayTrigger,
-  Tooltip
+  Tooltip,
+
 } from 'react-bootstrap';
 import {
   Layer,
@@ -61,6 +62,10 @@ export default class Tools extends Component {
     this.state.color_sommet = (this.state.appstore.enableCreation) ?
       '#4169E1' :
       'black';
+      const tooltip = (
+  <Tooltip id="tooltip"><strong>cliquer pour activer la creation de sommet!</strong> 
+  n'oubli pas de coucher le champs ci-dessous si vous voulez cree une etat finle</Tooltip>
+);
     return (
       <Col xs={12} md={2}>
 				{/*le div avec la class subContainer c'est just pour entouré ,
@@ -70,24 +75,17 @@ export default class Tools extends Component {
 					<h2>Tools</h2>
 {/*
 	ici on just dessine un cercle  avec un lettre s dedant*/}
-    <Tooltip placement="right" className="in" id="tooltip-right">
-      cliquer ici
-    </Tooltip>
-					<Stage width={50} height={50}>
-						<Layer>
-							<Group onClick={this.enableCreation.bind(this)}>
-								<Circle y={20} x={30} radius={20} fill={this.state.color_sommet}/>
-								<Text x={25} y={15} text={'S'} fontSize={18} fontFamily={'Calibri'} fill={'#fff'} width={100}/>
-							</Group>
-						</Layer>
-					</Stage>
+    
+    <OverlayTrigger placement="right" overlay={tooltip}>
+      <Button id="creation_de_sommet" onClick={this.enableCreation.bind(this)}><strong>S</strong></Button>
+   </OverlayTrigger>
 
 					{/*
 						ce input c'est pour qu'on marque ulterierement les sommet qui represente les etats finaux*/}
-
+<label for="checkbox">une etat finale</label>
 					<input type="checkbox" id="checkbox" name="test" value="false" onChange={this.set_finale.bind(this)}/>    
                     
-	<label for="checkbox">une etat finale</label>
+	
 	{/************************  la creation de l'arc***********************/}
 					<h4 className="title">Creation d'arc</h4>
 
@@ -115,7 +113,7 @@ export default class Tools extends Component {
 							input: e.target.value || null
 						})} value={this.state.input || ''}/>
 						{/**cet button est pour la création de l'arc à partir des valeurs deja entre par l'utilisateur**/}
-						<Button bsStyle="primary" value='Reset' onClick={this.createArc.bind(this)}>
+						<Button id="arc_button" value='Reset' onClick={this.createArc.bind(this)}>
 							Creer l'arc
 						</Button>
 				

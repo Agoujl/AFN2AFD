@@ -69,7 +69,7 @@ export default class AFD extends Component {
             </h2>
       {
         //c'est un boutton au cas de click il lance la fonction de la classe creatAfd()
-    }
+     }
             <Button onClick={this.creatAfd.bind(this)} bsStyle="primary">AFN-->AFD</Button>
             {
             /*ici on va dessiner un tableau qui va lister les valeurs des tableaux creé aprés le traitement*/
@@ -471,6 +471,7 @@ return (
                         );
 
                     })}
+      
                 </Layer>
             </Stage>
         </div> < /Col >)}}
