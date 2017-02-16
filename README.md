@@ -5,7 +5,7 @@
 [TOC]
 
 ###Introduction#
- cette petite application  vient d'illustrer le fonctionnement de l'algorithme qui a pour but le determinisation d'un automate finie. ce programme est oriente web écrite à l'aide du
+ Cette petite application  vient d'illustrer le fonctionnement de l'algorithme qui a pour but la determinisation d'un automate finie. ce programme est oriente web et écrit à l'aide de
 * reactjs [https://facebook.github.io/react/](http://)
 * react flux [https://facebook.github.io/flux/](http://)
 * react-konva [https://github.com/lavrton/react-konva](http://)
