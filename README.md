@@ -24,9 +24,9 @@ npm start
 ```
 ###auteurs#
 
-![](anass.jpg =250x250)
-![](saad.jpg =250x2500)
-![](dounia.jpg =250x2500)
+![](anass.jpg)
+![](saad.jpg)
+![](dounia.jpg)
 
 
 <table>
