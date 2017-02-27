@@ -23,4 +23,18 @@ npm start
 
 ```
 ###auteurs#
-![members.png](members.png)
+<img src="members.png" alt="Drawing" style="width: 400px;"/>
+###quelque image qui illustre le fonctionnement de l'application
+<table>
+<tr>
+<td><img src="ensaimage.png" alt="Drawing" style="width:200px; "/></td>
+<td><img src="im1.png" alt="Drawing" style="width: 200px;"/></td>
+
+</tr>
+<tr>
+<td><img src="im2.png" alt="Drawing" style="width: 200px; "/></td>
+<td><img src="im3.png" alt="Drawing" style="width: 200px; "/></td>
+</tr>
+
+
+</table>
