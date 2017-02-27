@@ -23,14 +23,13 @@ npm start
 
 ```
 ###auteurs#
-<table>
-<tr>
-<td>![](anass.jpg | width=100)</td>
-<td>![](saad.jpg | width=100)</td>
-<td>![](dounia.jpg | width=100)</td>
 
-</tr>
-<tr>
+![](anass.jpg | width=100)
+![](saad.jpg | width=100)
+![](dounia.jpg | width=100)
+
+
+<table>
 <td><p>CHBANI Anass</p></td>
 <td><p>AGOUJIL Saad</p></td>
 <td>BELANNAB Dounia</td>
