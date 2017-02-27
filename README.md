@@ -23,19 +23,7 @@ npm start
 
 ```
 ###auteurs#
-<table>
-<tr>
-<td><img src="anass.jpg" alt="Drawing" /></td>
-<td><img src="saad.jpg" alt="Drawing" /></td>
-<td><img src="dounia.jpg" alt="Drawing" /></td>
-</tr>
-<tr>
-<td><p>CHBANI Anass</p></td>
-<td><p>AGOUJIL Saad</p></td>
-<td>BELANNAB Dounia</td>
-</tr>
-
-</table>
+<img src="memberss.png" alt="Drawing" style="width:200px; "/>
 ###quelque image qui illustre le fonctionnement de l'application
 <table>
 <tr>
