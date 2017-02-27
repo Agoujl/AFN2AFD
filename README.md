@@ -5,7 +5,7 @@
 [TOC]
 
 ###Introduction#
- Cet application  vient d'illustrer le fonctionnement d'un algorithme qui a pour but la déterminisation d'un automate finie. Ce programme est orienté web et écrit à l'aide de
+ Cette petite application  vient d'illustrer le fonctionnement de l'algorithme qui a pour but la determinisation d'un automate finie. ce programme est oriente web et écrit à l'aide de
 * reactjs [https://facebook.github.io/react/](http://)
 * react flux [https://facebook.github.io/flux/](http://)
 * react-konva [https://github.com/lavrton/react-konva](http://)
@@ -23,7 +23,19 @@ npm start
 
 ```
 ###auteurs#
-<img src="members.png" alt="Drawing" style="width: 400px;"/>
+<table>
+<tr>
+<td><img src="anass.jpg" alt="Drawing" style="width:200px; "/></td>
+<td><img src="saad.jpg" alt="Drawing" style="width: 200px"/></td>
+<td><img src="dounia.jpg" alt="Drawing" style="width: 200px"/></td>
+</tr>
+<tr>
+<td><p>CHBANI Anass</p></td>
+<td><p>AGOUJIL Saad</p></td>
+<td>BELANNAB Dounia</td>
+</tr>
+
+</table>
 ###quelque image qui illustre le fonctionnement de l'application
 <table>
 <tr>
